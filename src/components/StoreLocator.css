@@ -1,0 +1,221 @@
+.store-locator {
+  background-color: #1A1A1A;
+  color: #FAF9F6;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.locator-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.locator-text h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.locator-text p {
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+  max-width: 450px;
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+  background: rgba(250, 249, 246, 0.05);
+  border: 1px solid rgba(250, 249, 246, 0.2);
+  border-radius: 50px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #FAF9F6;
+}
+
+.search-icon {
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+
+.input-wrapper select.city-select {
+  background: transparent;
+  border: none;
+  color: #FAF9F6;
+  width: 100%;
+  height: 60px;
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.input-wrapper select.city-select option {
+  background: #1A1A1A;
+  color: #FAF9F6;
+  padding: 1rem;
+}
+
+.btn-locate {
+  background: #FAF9F6;
+  color: #1A1A1A;
+  border: none;
+  padding: 0 2.5rem;
+  border-radius: 50px;
+  font-family: var(--font-quirky);
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s;
+}
+
+.btn-locate:hover {
+  transform: scale(1.05);
+}
+
+.availability-status {
+  margin-top: 1.2rem;
+  background: rgba(46, 213, 20, 0.08);
+  border: 1px solid rgba(46, 213, 20, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #2ed573;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(46, 213, 115, 0.6);
+  animation: pulse-dot 2s infinite;
+}
+
+.availability-status p {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: #1A531B;
+}
+
+.availability-status strong {
+  color: #1A1A1A;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.mock-map {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #222;
+  border-radius: 32px;
+  padding: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #2a2a2a;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.map-pin {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pin-bottle {
+  width: 40px;
+  height: 80px;
+  background: #FF2A85; /* Brand Pink */
+  border-radius: 8px 8px 4px 4px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 42, 133, 0.4);
+}
+
+.pin-bottle::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 20px;
+  background: inherit;
+  border-radius: 4px 4px 0 0;
+}
+
+.pin-shadow {
+  width: 40px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  margin-top: 10px;
+  filter: blur(4px);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 900px) {
+  .locator-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+  .btn-locate {
+    height: 60px;
+  }
+}

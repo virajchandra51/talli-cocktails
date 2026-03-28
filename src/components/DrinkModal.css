@@ -1,0 +1,183 @@
+.drink-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.drink-modal-content {
+  background-color: var(--color-bg);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.close-modal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  width: 100%;
+}
+
+.modal-bottle-col {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.02);
+}
+
+.modal-bottle-img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+.modal-details-col {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-taste-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.modal-desc {
+  font-size: 1.05rem;
+  color: rgba(26, 26, 26, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section h3 {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.modal-section p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.taste-profile-sec {
+  background-color: rgba(0,0,0,0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.taste-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.taste-bar-container:last-child {
+  margin-bottom: 0;
+}
+
+.taste-label {
+  width: 60px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.taste-track {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+
+.taste-segment {
+  height: 8px;
+  flex: 1;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  transform-origin: bottom;
+}
+
+.taste-segment.active {
+  background-color: var(--color-text);
+}
+
+.modal-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-bottle-col {
+    padding: 2rem;
+  }
+  
+  .modal-bottle-img {
+    max-height: 30vh;
+  }
+  
+  .modal-details-col {
+    padding: 2rem;
+  }
+  
+  .drink-modal-overlay {
+    padding: 1rem;
+  }
+}

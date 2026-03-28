@@ -1,0 +1,99 @@
+.stay-balanced-section {
+  background-color: #E2ECF6; /* Soft hydration blue */
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.stay-balanced-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  box-shadow: 0 20px 40px rgba(0, 50, 100, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.balanced-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #1A3B5C;
+  margin-bottom: 1rem;
+}
+
+.balanced-text {
+  font-size: 1.15rem;
+  color: #335577;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.balanced-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.water-info h3 {
+  font-family: var(--font-ui);
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.water-vol {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.water-price {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #1A3B5C;
+}
+
+.balanced-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-add-water {
+  background-color: #1A3B5C;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-add-water:hover {
+  background-color: #112840;
+  transform: translateY(-2px);
+}
+
+.btn-keep-sane {
+  background-color: transparent;
+  color: #1A3B5C;
+  border: 2px solid #1A3B5C;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.2s;
+}
+
+.btn-keep-sane:hover {
+  background-color: rgba(26, 59, 92, 0.1);
+}

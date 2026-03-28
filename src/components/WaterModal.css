@@ -1,0 +1,136 @@
+.water-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.water-modal-content {
+  background: #FAF9F6;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.water-modal-image {
+  width: 100%;
+  height: 250px;
+  background: #EFEBE0;
+  overflow: hidden;
+  position: relative;
+}
+
+.water-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.water-modal-image img:hover {
+  transform: scale(1.05);
+}
+
+.water-modal-details {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.water-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: #1A1A1A;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.water-text {
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.water-price {
+  font-family: var(--font-quirky);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3E2F28;
+  margin-bottom: 2rem;
+}
+
+.water-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-add-water {
+  background: #3E2F28;
+  color: #FAF9F6;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  font-family: var(--font-quirky);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-add-water:hover {
+  background: #2A1F1B;
+  transform: translateY(-2px);
+}
+
+.btn-skip-water {
+  background: transparent;
+  color: #1A1A1A;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  padding: 1rem;
+  border-radius: 50px;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-skip-water:hover {
+  background: rgba(26, 26, 26, 0.05);
+  border-color: rgba(26, 26, 26, 0.5);
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: rgba(250, 249, 246, 0.8);
+  border: none;
+  color: #1A1A1A;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.btn-close-modal:hover {
+  background: #fff;
+}

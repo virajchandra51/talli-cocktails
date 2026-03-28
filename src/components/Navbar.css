@@ -1,0 +1,133 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(250, 249, 246, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.55rem 0;
+}
+
+.navbar.with-pulse {
+  padding-top: 2.2rem;
+}
+
+.navbar.no-pulse {
+  padding-top: 0.55rem;
+}
+
+.availability-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2ed573;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(46, 213, 115, 0.2);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #FFF;
+  animation: pulse-small 1.5s infinite;
+}
+
+@keyframes pulse-small {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.navbar.scrolled {
+  background: rgba(250, 249, 246, 0.98);
+  padding: 0.4rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+}
+
+.nav-logo {
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: var(--font-quirky);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: opacity 0.2sease;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-brown-accent);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  font-family: var(--font-quirky);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cart-btn:hover {
+  background-color: #2D211B;
+  transform: translateY(-1px);
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none; /* simple mobile fallback */
+  }
+}

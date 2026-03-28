@@ -1,0 +1,203 @@
+.razer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 110000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.razer-modal {
+  background: #fff;
+  width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.razer-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.razer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #333;
+}
+
+.razer-logo-small {
+  width: 24px;
+  height: 24px;
+  background: #339af0;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.razer-brand span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-close-razer {
+  background: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.razer-amount {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.razer-amount .label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.razer-amount .value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.razer-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.razer-tabs button {
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.razer-tabs button.active {
+  color: #339af0;
+  background: rgba(51, 154, 240, 0.05);
+  box-shadow: inset 0 -2px 0 #339af0;
+}
+
+.razer-body {
+  padding: 2rem 1.5rem;
+  min-height: 180px;
+}
+
+.upi-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.upi-input input,
+.card-inputs input,
+.bank-select {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.card-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-inputs .row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-verify {
+  background: #339af0;
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.razer-security {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #2ed573;
+}
+
+.btn-pay-now {
+  margin: 0 1.5rem 1.5rem;
+  background: #339af0;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-pay-now:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.razer-footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.razer-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: #666;
+}
+
+.spinner {
+  color: #339af0;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

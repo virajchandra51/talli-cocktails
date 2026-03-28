@@ -1,0 +1,62 @@
+:root {
+  --color-bg: #FAF9F6;
+  --color-text: #1A1A1A;
+  --color-primary: #E5A93B; /* Accent color for buttons or hover */
+  --color-brown-accent: #3E2F28; /* Dark brown for buttons and rich accents */
+  --color-secondary: #EFEBE0; /* Darker beige for elements */
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-ui: 'Inter', sans-serif;
+  --font-quirky: 'Bricolage Grotesque', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-ui);
+  border: none;
+  background: none;
+}
+
+/* Scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1cdc5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9a59c;
+}

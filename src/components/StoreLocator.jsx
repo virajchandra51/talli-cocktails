@@ -9,7 +9,7 @@ const StoreLocator = () => {
   const cities = ['Gurgaon'];
 
   const handleSearch = () => {
-    setSearchResult(`Available in ${selectedCity} at 1 premium store. 15-min delivery active.`);
+    setSearchResult(`Available in ${selectedCity} at 1 premium store. 1-2 hour delivery active.`);
   };
 
   const handleLocate = (e) => {

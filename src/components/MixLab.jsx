@@ -187,7 +187,7 @@ const MixLab = () => {
   };
 
   return (
-    <section className="mix-lab-section">
+    <section className="mix-lab-section" id="mix-lab">
       <div className="mix-lab-header">
         <h2 className="mix-lab-title">Mix Lab</h2>
         <p className="mix-lab-sub">Don't know what to pick? Let our algorithm do the heavy lifting.</p>

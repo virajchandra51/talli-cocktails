@@ -13,17 +13,17 @@ const LegalOverlay = () => {
     FAQ: {
       title: 'Frequently Asked Questions',
       sections: [
-        { q: 'What is the delivery time?', a: 'We typically deliver within 30-45 minutes depending on your location and traffic.' },
-        { q: 'What is the return policy?', a: 'Return 6 empty Talli bottles to any of our partners and get 1 fresh bottle on the house!' },
+        { q: 'What is the delivery time?', a: 'We typically deliver within 1-2 hours depending on your location and traffic.' },
+        { q: 'What is the return policy?', a: 'Return 6 empty Talli bottles and get 1 bottle free; you must have previously bought at least 3 bottles from us.' },
         { q: 'Are the drinks pre-mixed?', a: 'Yes, our cocktails are expertly pre-mixed and ready to pour over ice.' }
       ]
     },
     TERMS: {
       title: 'Terms & Conditions',
       body: [
-        'Must be 21/25+ to order depending on state laws. Age verification is mandatory at delivery.',
+        'Must be 25+ to order. Age verification is mandatory at delivery.',
         'Enjoy responsibly. Do not drink and drive.',
-        'Orders once placed can only be cancelled within 2 minutes.',
+        'Orders once placed can only be cancelled within 5 minutes.',
         'Talli Cocktails reserves the right to refuse service to intoxicated individuals.'
       ]
     },
@@ -40,7 +40,6 @@ const LegalOverlay = () => {
       title: 'Cancellation & Refund',
       body: [
         'Cancellations are allowed within 5 minutes of placing an order.',
-        'After 5 minutes, our mixologists start preparing your fresh bottles and cancellations are not possible.',
         'Refunds for eligible cancellations are processed within 3-5 business days to your original payment method.',
         'If you receive a damaged bottle, please contact tribe@talli.com immediately with photos.'
       ]
@@ -48,8 +47,8 @@ const LegalOverlay = () => {
     SHIPPING: {
       title: 'Shipping Policy',
       body: [
-        'We currently deliver in Mumbai, Bangalore, Pune, Delhi, and Goa.',
-        'Our standard delivery time is 30-45 minutes.',
+        'We currently deliver in Gurgaon only.',
+        'Our standard delivery time is 1-2 hours.',
         'All orders are handled by our trained Talli riders to ensure perfect temperature control.',
         'Delivery fees are based on your order value: Free for orders above ₹999, ₹50 otherwise.'
       ]

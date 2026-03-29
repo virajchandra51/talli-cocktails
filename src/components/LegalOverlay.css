@@ -43,6 +43,8 @@
   padding: 4rem;
   overflow-y: auto;
   scrollbar-width: thin;
+  overscroll-behavior: contain;
+  touch-action: auto;
 }
 
 .legal-scroll h2 {

@@ -63,7 +63,7 @@ const ReturnEarn = () => {
   };
 
   return (
-    <section className="return-earn-section">
+    <section className="return-earn-section" id="#return-earn">
       <div className="re-header">
         <h2 className="re-title">Bring It Back. Get More.</h2>
         <p className="re-sub">Sustainability never tasted this good. Return 6 empty bottles, get 1 on the house.</p>

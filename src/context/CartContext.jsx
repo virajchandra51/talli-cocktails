@@ -11,10 +11,9 @@ export const CartProvider = ({ children }) => {
   const [activeLegalModal, setActiveLegalModal] = useState(null); // 'FAQ', 'TERMS', 'PRIVACY', or null
   const [razerPayActive, setRazerPayActive] = useState(false);
   const [deliverySlot, setDeliverySlot] = useState('Deliver Now');
+  const [deliveryAddress, setDeliveryAddress] = useState('');
   const [deliveryInstructions, setDeliveryInstructions] = useState('');
 
-  const GST_RATE = 0.18;
-  const CESS_RATE = 0.012;
   const MIN_ORDER = 500;
   const FREE_DELIVERY_THRESHOLD = 999;
   const DELIVERY_FEE = 50;
@@ -77,12 +76,10 @@ export const CartProvider = ({ children }) => {
   };
 
   const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const gst = Math.round(subtotal * GST_RATE);
-  const cess = Math.round(subtotal * CESS_RATE);
   const needsDeliveryFee = subtotal > 0 && subtotal < FREE_DELIVERY_THRESHOLD;
   const deliveryFee = needsDeliveryFee ? DELIVERY_FEE : 0;
   const discount = discountApplied ? 50 : 0;
-  const total = Math.max(0, subtotal + gst + cess + deliveryFee - discount);
+  const total = Math.max(0, subtotal + deliveryFee - discount);
   const minOrderRemaining = Math.max(0, MIN_ORDER - subtotal);
   const isMinOrderMet = subtotal >= MIN_ORDER;
 
@@ -104,6 +101,8 @@ export const CartProvider = ({ children }) => {
       setRazerPayActive,
       deliverySlot,
       setDeliverySlot,
+      deliveryAddress,
+      setDeliveryAddress,
       deliveryInstructions,
       setDeliveryInstructions,
       pendingProduct,
@@ -114,8 +113,6 @@ export const CartProvider = ({ children }) => {
       applyCoupon,
       pricing: {
         subtotal,
-        gst,
-        cess,
         deliveryFee,
         discount,
         total,

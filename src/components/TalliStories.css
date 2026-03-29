@@ -1,3 +1,97 @@
+/* Story Modal Overlay Styles */
+.story-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.story-modal {
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 32px;
+  position: relative;
+  color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.btn-close-story {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #1A1A1A;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 2rem;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.btn-close-story:hover {
+  opacity: 1;
+}
+
+.story-modal-content {
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: auto;
+}
+.story-modal-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.story-modal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.story-modal-text {
+  font-family: var(--font-ui);
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .story-modal {
+    max-width: 98vw;
+    padding: 0;
+  }
+  .story-modal-content {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+  .story-modal-image {
+    max-width: 100%;
+  }
+  .story-modal-content h2 {
+    font-size: 1.3rem;
+  }
+  .story-modal-text {
+    font-size: 1rem;
+  }
+}
 .talli-stories {
   background-color: #FAF9F6;
   padding: 8rem 2rem;

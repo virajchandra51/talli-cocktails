@@ -8,6 +8,7 @@ const CartDrawer = () => {
   const { 
     items, isCartOpen, setIsCartOpen, updateQuantity, removeItem, 
     checkoutState, pricing, deliverySlot, setDeliverySlot, 
+    deliveryAddress, setDeliveryAddress,
     deliveryInstructions, setDeliveryInstructions, setRazerPayActive,
     couponCode, setCouponCode, applyCoupon
   } = useCart();
@@ -91,14 +92,26 @@ const CartDrawer = () => {
 
                   <div className="delivery-customization">
                     <div className="delivery-field">
+                      <label>Delivery Address</label>
+                      <textarea
+                        placeholder="Enter full delivery address"
+                        value={deliveryAddress}
+                        onChange={(e) => setDeliveryAddress(e.target.value)}
+                      />
+                    </div>
+                    <div className="delivery-field">
                       <label>Delivery Slot</label>
                       <select 
                         value={deliverySlot} 
                         onChange={(e) => setDeliverySlot(e.target.value)}
                       >
                         <option>Deliver Now</option>
-                        <option>Evening (6 PM - 9 PM)</option>
-                        <option>Late Night (9 PM - 12 AM)</option>
+                        <option>10 AM - 12 PM</option>
+                        <option>12 PM - 2 PM</option>
+                        <option>2 PM - 4 PM</option>
+                        <option>4 PM - 6 PM</option>
+                        <option>6 PM - 8 PM</option>
+                        <option>8 PM - 10 PM</option>
                       </select>
                     </div>
                     <div className="delivery-field">
@@ -131,14 +144,6 @@ const CartDrawer = () => {
                   <div className="summary-row">
                     <span>Subtotal</span>
                     <span>₹{pricing.subtotal}</span>
-                  </div>
-                  <div className="summary-row small">
-                    <span>GST (18%)</span>
-                    <span>₹{pricing.gst}</span>
-                  </div>
-                  <div className="summary-row small">
-                    <span>Cess (1.2%)</span>
-                    <span>₹{pricing.cess}</span>
                   </div>
                   <div className="summary-row">
                     <span>Delivery Fee</span>
